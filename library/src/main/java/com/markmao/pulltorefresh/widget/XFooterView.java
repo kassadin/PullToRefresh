@@ -8,11 +8,12 @@ import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import com.markmao.pulltorefresh.R;
 
 /**
  * The footer view for {@link com.markmao.pulltorefresh.widget.XListView} and
- * {@link com.markmao.pulltorefresh.widget.XScrollView}
+ * {@link XScrollView}
  *
  * @author markmjw
  * @date 2013-10-08
@@ -49,7 +50,7 @@ public class XFooterView extends LinearLayout {
 
     private void initView(Context context) {
         mLayout = LayoutInflater.from(context).inflate(R.layout.vw_footer, null);
-        mLayout.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT,
+        mLayout.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,
                 LayoutParams.WRAP_CONTENT));
         addView(mLayout);
 
@@ -124,7 +125,7 @@ public class XFooterView extends LinearLayout {
      */
     public void setBottomMargin(int margin) {
         if (margin < 0) return;
-        LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) mLayout.getLayoutParams();
+        LayoutParams lp = (LayoutParams) mLayout.getLayoutParams();
         lp.bottomMargin = margin;
         mLayout.setLayoutParams(lp);
     }
@@ -135,7 +136,7 @@ public class XFooterView extends LinearLayout {
      * @return
      */
     public int getBottomMargin() {
-        LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) mLayout.getLayoutParams();
+        LayoutParams lp = (LayoutParams) mLayout.getLayoutParams();
         return lp.bottomMargin;
     }
 
@@ -159,7 +160,7 @@ public class XFooterView extends LinearLayout {
      * hide footer when disable pull load more
      */
     public void hide() {
-        LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) mLayout.getLayoutParams();
+        LayoutParams lp = (LayoutParams) mLayout.getLayoutParams();
         lp.height = 0;
         mLayout.setLayoutParams(lp);
     }
@@ -168,7 +169,7 @@ public class XFooterView extends LinearLayout {
      * show footer
      */
     public void show() {
-        LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) mLayout.getLayoutParams();
+        LayoutParams lp = (LayoutParams) mLayout.getLayoutParams();
         lp.height = LayoutParams.WRAP_CONTENT;
         mLayout.setLayoutParams(lp);
     }

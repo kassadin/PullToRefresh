@@ -16,7 +16,7 @@ import com.markmao.pulltorefresh.R;
 
 /**
  * The header view for {@link com.markmao.pulltorefresh.widget.XListView} and
- * {@link com.markmao.pulltorefresh.widget.XScrollView}
+ * {@link XScrollView}
  *
  * @author markmjw
  * @date 2013-10-08
@@ -55,7 +55,7 @@ public class XHeaderView extends LinearLayout {
 
     private void initView(Context context) {
         // Initial set header view height 0
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, 0);
+        LayoutParams lp = new LayoutParams(LayoutParams.MATCH_PARENT, 0);
         mContainer = (LinearLayout) LayoutInflater.from(context).inflate(R.layout.vw_header, null);
         addView(mContainer, lp);
         setGravity(Gravity.BOTTOM);
@@ -131,7 +131,7 @@ public class XHeaderView extends LinearLayout {
      */
     public void setVisibleHeight(int height) {
         if (height < 0) height = 0;
-        LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) mContainer.getLayoutParams();
+        LayoutParams lp = (LayoutParams) mContainer.getLayoutParams();
         lp.height = height;
         mContainer.setLayoutParams(lp);
     }

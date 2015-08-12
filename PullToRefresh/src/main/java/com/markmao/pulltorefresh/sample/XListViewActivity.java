@@ -1,4 +1,4 @@
-package com.markmao.pulltorefresh.ui;
+package com.markmao.pulltorefresh.sample;
 
 import android.app.Activity;
 import android.content.Context;
@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ArrayAdapter;
 
-import com.markmao.pulltorefresh.R;
+
 import com.markmao.pulltorefresh.widget.XListView;
 
 import java.text.SimpleDateFormat;
